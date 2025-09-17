@@ -10,7 +10,7 @@ bool tile(Grid& grid, int row, int& max_row, std::unordered_set<int64_t> used_nu
 bool increment(Grid& grid, std::vector<Cell*> tiles, int row, int& max_row, std::unordered_set<int64_t> used_numbers, int index, int& count) {
     // Finished incrementing all tiles in this row
     
-    // 
+    // If recursion depth is too deep, it is unlikely that this grid generates a solution. Stop recursion. 
     if (count > 60000) {
         return false; 
     }
